@@ -4,6 +4,7 @@ import { IoIosSearch } from "react-icons/io";
 import { TbDiscount2 } from "react-icons/tb";
 import { IoHelpBuoyOutline } from "react-icons/io5";
 import { IoPersonOutline } from "react-icons/io5";
+import { BsCart } from "react-icons/bs";
 
 export default function Header() {
 
@@ -36,7 +37,7 @@ export default function Header() {
         },
         {
             name:"Cart",
-            icon:<IoIosSearch/>,
+            icon:<BsCart/>,
         },
     ]
 
