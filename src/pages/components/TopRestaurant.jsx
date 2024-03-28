@@ -56,6 +56,7 @@ export default function TopRestaurant() {
                    ) 
                 }
             </div>
+            <hr className="my-6 border-[1px]" />
         </div>
     )
 }
