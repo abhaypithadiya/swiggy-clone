@@ -43,7 +43,7 @@ export default function Header() {
 
     return (
         <>
-        <div className="black-overlay w-full h-full fixed duration-500" onClick={hideSideMenu} style={{
+        <div className="black-overlay z-[999999] w-full h-full fixed duration-500" onClick={hideSideMenu} style={{
             opacity: toggle ? 1:0,
             visibility: toggle? "visible" : "hidden"
         }}>
@@ -53,7 +53,7 @@ export default function Header() {
 
             </div>
         </div>
-        <header className="p-[15px] shadow-xl">
+        <header className="p-[15px] shadow-xl sticky top-0 z-[9999] bg-white">
             <div className="max-w-[1200px] mx-auto flex items-center">
                 <div className="w-[100px]">
                     <img src="images/swiggy-logo.png" className="w-full" alt="Swiggy Logo" />

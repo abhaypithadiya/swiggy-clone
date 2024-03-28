@@ -42,7 +42,8 @@ export default function Card(props) {
         )
     }
     return (
-        <div className="w-[270px] shrink-0 grow duration-500" style={props.style}>
+        <div className="w-[270px] shrink-0 grow duration-500 cursor-pointer mb-3" style={props.style}>
+            <div className="hover:scale-[0.9] duration-300">
             <div className="h-[180px] rounded-[15px] overflow-hidden relative">
                 <img className="object-cover w-full h-full" src={props.image} alt={props.name} />
                 <div className="image-overlay absolute w-full h-full top-0 flex items-end p-2 text-[18px] tracking-tighter font-bold text-white">
@@ -59,6 +60,8 @@ export default function Card(props) {
             </div>
             <div>
                 Calories: {props.caloriesPerServing} <br/> Difficulty: {props.difficulty}
+            </div>
+
             </div>
         </div>
     )
