@@ -31,7 +31,7 @@ export default function Category() {
     )
 
     return (
-        <div className="max-w-[1200px] mx-auto">
+        <div className="max-w-[1200px] mx-auto px-2">
             <div className="my-4 flex items-center justify-between">
                 <div className="text-[25px] font-bold">What's on your mind?</div>
                 <div className="flex">

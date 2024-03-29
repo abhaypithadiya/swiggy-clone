@@ -37,7 +37,7 @@ export default function OnlineDelivery(){
     )
 
     return (
-        <div className="max-w-[1200px] mx-auto" ref={componentRef}>
+        <div className="max-w-[1200px] mx-auto px-2" ref={componentRef}>
             <div className="my-4 flex items-center justify-between">
                 <div className="text-[25px] font-bold">Restaurants with online food delivery in Mumbai</div>
             </div>
@@ -49,7 +49,7 @@ export default function OnlineDelivery(){
                     <div className="p-3 rounded-[18px] text-[14px] text-[#02060cbf] shadow flex items-center cursor-pointer gap-1">New on Swiggy</div>
                 </div>
             </div>
-            <div className="grid grid-cols-4 gap-3">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
             {
                    topRestaurants.map(
                     (data,index) => {

@@ -33,7 +33,7 @@ export default function TopRestaurant() {
     )
 
     return (
-        <div className="max-w-[1200px] mx-auto">
+        <div className="max-w-[1200px] mx-auto px-2">
             <div className="my-4 flex items-center justify-between">
                 <div className="text-[25px] font-bold">Top restaurant chains in Mumbai</div>
                 <div className="flex">
@@ -49,7 +49,7 @@ export default function TopRestaurant() {
                 {
                    topRestaurants.map(
                     (data,index) => {
-                        return <Card style={{
+                        return <Card width="w-full md:w-[273px]" style={{
                             transform: `translateX(-${restaurantSlide * 100}%)`
                         }} {...data} key={index}/>
                     }
