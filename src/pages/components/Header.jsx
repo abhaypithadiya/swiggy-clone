@@ -62,7 +62,7 @@ export default function Header() {
                     <span className="font-bold border-b-[3px] text-[#3d4152] border-[black]">City</span>&nbsp; State, Country
                     <RxCaretDown fontSize={25} onClick={showSideMenu} className="font-bold inline text-[#fc8019] cursor-pointer"/>
                 </div>
-                <nav className="flex list-none gap-5 text-[#3d4152] ml-auto text-[18px]">
+                <nav className="hidden md:flex list-none gap-5 text-[#3d4152] ml-auto text-[18px]">
                     {
                         links.map(
                             (links,index) => {

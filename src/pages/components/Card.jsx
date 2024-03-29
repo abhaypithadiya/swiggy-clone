@@ -42,7 +42,7 @@ export default function Card(props) {
         )
     }
     return (
-        <div className="w-[270px] shrink-0 grow duration-500 cursor-pointer mb-3" style={props.style}>
+        <div className={`${props.width} shrink-0 duration-500 cursor-pointer mb-3`} style={props.style}>
             <div className="hover:scale-[0.9] duration-300">
             <div className="h-[180px] rounded-[15px] overflow-hidden relative">
                 <img className="object-cover w-full h-full" src={props.image} alt={props.name} />
@@ -50,7 +50,7 @@ export default function Card(props) {
                     {props.cuisine}
                 </div>
             </div>
-            <div className="mt-3 text-xl font-bold">
+            <div className="mt-3 text-md md:text-xl font-bold">
                 {props.name}
             </div>
             <div className="flex items-center">
