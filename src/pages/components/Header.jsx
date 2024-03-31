@@ -11,6 +11,7 @@ import { MdMyLocation } from "react-icons/md";
 export default function Header() {
 
     const [toggle,setToggle] = useState(false);
+    const [toggleSignUpForm,setToggleSignUp] = useState(false);
 
     const showSideMenu = ()=>{
         setToggle(true);
@@ -18,6 +19,14 @@ export default function Header() {
 
     const hideSideMenu = ()=>{
         setToggle(false);
+    }
+
+    const showSideSignUpMenu = ()=>{
+        setToggleSignUp(true);
+    }
+
+    const hideSideSignUpMenu = ()=>{
+        setToggleSignUp(false);
     }
 
     const links = [
@@ -67,6 +76,22 @@ export default function Header() {
                 </div>
             </div>
         </div>
+
+        <div className="black-overlay z-[999999] w-full h-full fixed duration-500" onClick={hideSideSignUpMenu} style={{
+            opacity: toggleSignUpForm ? 1:0,
+            visibility: toggleSignUpForm? "visible" : "hidden"
+        }}>
+            <div onClick={(e) => e.stopPropagation()} className="w-[500px] pt-[30px] bg-white pl-[50px] pr-[40px] h-full absolute duration-[400ms]" style={{
+                right: toggleSignUpForm ? '0%' : '-100%',
+            }}>
+                <div className="mb-[50px]">
+                    <RxCross2 onClick={hideSideSignUpMenu} className="cursor-pointer text-[28px] text-[#3d4152]" />
+                </div>
+                Test
+            </div>
+        </div>
+
+
         <header className="p-[15px] shadow-xl sticky top-0 z-[9999] bg-white">
             <div className="max-w-[1200px] mx-auto flex items-center">
                 <div className="w-[100px]">
@@ -80,7 +105,7 @@ export default function Header() {
                     {
                         links.map(
                             (links,index) => {
-                                return <li key={index} className="flex hover:text-[#fc8019] mr-[60px] cursor-pointer items-center gap-2">
+                                return <li key={index} onClick={links.name === "Sign In" ? showSideSignUpMenu : null} className="flex hover:text-[#fc8019] mr-[60px] cursor-pointer items-center gap-2">
                                     {links.icon}
                                     {links.name}
                                 </li>
