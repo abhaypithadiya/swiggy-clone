@@ -81,13 +81,30 @@ export default function Header() {
             opacity: toggleSignUpForm ? 1:0,
             visibility: toggleSignUpForm? "visible" : "hidden"
         }}>
-            <div onClick={(e) => e.stopPropagation()} className="w-[500px] pt-[30px] bg-white pl-[50px] pr-[40px] h-full absolute duration-[400ms]" style={{
+            <div onClick={(e) => e.stopPropagation()} className="w-[500px] pt-[30px] bg-white pr-[100px] pl-[40px] h-full absolute duration-[400ms]" style={{
                 right: toggleSignUpForm ? '0%' : '-100%',
             }}>
                 <div className="mb-[50px]">
                     <RxCross2 onClick={hideSideSignUpMenu} className="cursor-pointer text-[28px] text-[#3d4152]" />
                 </div>
-                Test
+                <div className="mb-8 flex justify-between">
+                    <div>
+                        <p className="font-medium text-[30px]">Login</p>
+                        <p className="font-lights mt-1 text-[14px]">or <span className="text-[#fc8019] cursor-pointer font-medium">create an account</span></p>
+                        <hr className="w-10 h-0.5 mt-4 bg-black rounded" />
+                    </div>
+                    <div>
+                        <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/Image-login_btpq7r" width={100} height={105} alt="" />
+                    </div>
+                </div>
+
+                <div className="border border-[#d4d5d9] mb-5">
+                    <input className="w-full h-[50px] px-[30px] focus:outline-none focus:shadow-[0_1px_7px_1px_rgba(210,213,217,1)]" type="text" placeholder="Phone number" />
+                </div>
+                <div>
+                    <button className="w-full h-[50px] bg-[#fc8019] text-[14px] font-medium text-white px-[30px]">LOGIN</button>
+                    <p className="text-[#686b78] mt-1 text-[12px]">By clicking on Login, I accept the <span className="text-[#282c3f] cursor-pointer">Terms & Conditions</span> & <span className="text-[#282c3f] cursor-pointer">Privacy Policy</span></p>
+                </div>
             </div>
         </div>
 
