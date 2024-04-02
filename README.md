@@ -14,27 +14,39 @@ To clone and set up this project locally, follow these steps:
 
 1. **Clone the Repository:**
 
-   git clone [<repository-url>](https://github.com/abhaypithadiya/swiggy-clone.git)
+   ```bash
+   git clone https://github.com/abhaypithadiya/swiggy-clone.git
+   ```
 
 2. **Navigate to the Project Directory:**
 
-   cd swiggy-home-page-clone
+   ```bash
+   cd swiggy-clone
+   ```
 
 3. **Install Dependencies:**
 
+   ```bash
    npm install
+   ```
 
-   # or
+   or
 
+   ```bash
    yarn install
+   ```
 
 4. **Run the Development Server:**
 
+   ```bash
    npm run dev
+   ```
 
-   # or
+   or
 
+   ```bash
    yarn dev
+   ```
 
 5. **Open Your Browser:**
 
